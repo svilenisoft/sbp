@@ -71,7 +71,6 @@ namespace ZgradaApp {
             }
         }
 
-
         public static void obrisiZgradu(int idZgrade) {
             try {
                 ISession s = DataLayer.GetSession();
@@ -143,6 +142,7 @@ namespace ZgradaApp {
             return zgrade;
         }
 
+       
 
         public static bool dodajNivo(int idZgrade, string brNivoa, string tip) {
             try {
@@ -308,6 +308,87 @@ namespace ZgradaApp {
             }
 
             return objekti;
+        }
+
+        internal static bool dodajPoslovniObjekat(int idNivoa, string imeFirme, int rbr) {
+            try {
+                ISession s = DataLayer.GetSession();
+                Lokal l = new Lokal();
+                l.imeFirma = imeFirme;
+                l.nivo = s.Get<Nivo>(idNivoa);
+                l.redniBr = rbr;
+
+                s.SaveOrUpdate(l);
+
+                s.Flush();
+
+                s.Close();
+
+
+            } catch (Exception e) {
+                return false;
+            }
+            return true;
+        }
+
+        internal static bool dodajGaraznoMesto(int idNivoa, string reg, int rbr) {
+            try {
+                ISession s = DataLayer.GetSession();
+                Mesto m = new Mesto();
+                if (reg.Length == 0) {
+                    m.status = 0;
+                    m.regBr = null;
+                }
+                else {
+                    m.status = 1;
+                    m.regBr = reg;
+                }
+                m.nivo = s.Get<Nivo>(idNivoa);
+                m.redniBr = rbr;
+                s.SaveOrUpdate(m);
+
+                s.Flush();
+
+                s.Close();
+
+
+            } catch (Exception e) {
+                return false;
+            }
+            return true;
+        }
+
+        internal static bool obrisiObjekat(int idObjekta) {
+            try {
+                ISession s = DataLayer.GetSession();
+
+                Objekat o = s.Load<Objekat>(idObjekta);
+
+                s.Delete(o);
+                s.Flush();
+
+                s.Close();
+            } catch (Exception ec) {
+                return false;
+            }
+            return true;
+        }
+        #endregion
+
+        #region Ljudi
+        internal static List<VlasnikPregled> getSviLjudi() {
+            List<VlasnikPregled> osobe = new List<VlasnikPregled>();
+            try {
+                ISession s = DataLayer.GetSession();
+
+                
+
+                s.Close();
+            } catch (Exception ec) {
+                MessageBox.Show(ec.Message);
+            }
+
+            return osobe;
         }
         #endregion
         #region Liftovi
