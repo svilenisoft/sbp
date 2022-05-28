@@ -55,7 +55,18 @@ namespace ZgradaApp.Forme
                 MessageBox.Show("Izaberite zgradu koju zelite da izmenite!");
                 return;
             }
-            //todo
+            int idLifta = Int32.Parse(listaLiftoviView.SelectedItems[0].SubItems[8].Text);
+            int serBr = Int32.Parse(listaLiftoviView.SelectedItems[0].SubItems[0].Text);
+            string prozivodjac = listaLiftoviView.SelectedItems[0].SubItems[1].Text;
+            string datumServisa = listaLiftoviView.SelectedItems[0].SubItems[2].Text;
+            string datumKvara = listaLiftoviView.SelectedItems[0].SubItems[3].Text;
+            int brojdanaKvara = Int32.Parse(listaLiftoviView.SelectedItems[0].SubItems[4].Text);
+            int nosivost = Int32.Parse(listaLiftoviView.SelectedItems[0].SubItems[6].Text);
+            int maxBrOsba = Int32.Parse(listaLiftoviView.SelectedItems[0].SubItems[7].Text);
+           
+            string tipLifta = listaLiftoviView.SelectedItems[0].SubItems[5].Text;
+            DodajLiftForm forma = new DodajLiftForm(idZgrade,idLifta,serBr,prozivodjac,datumServisa,datumKvara,brojdanaKvara,nosivost,maxBrOsba,tipLifta);
+            forma.ShowDialog();
             fillLiftoviList();
         }
 
@@ -74,7 +85,7 @@ namespace ZgradaApp.Forme
 
             if (result == DialogResult.OK)
             {
-                if (DTOManager.obrisiNivo(idLifta))
+                if (DTOManager.obrisiLift(idLifta))
                 {
                     MessageBox.Show("Uspesno ste obrisali lift!");
                     fillLiftoviList();
@@ -91,5 +102,7 @@ namespace ZgradaApp.Forme
                 MessageBox.Show("Zgrada nije obrisana pokusajte ponovo!");
             }
         }
+
+    
     }
 }
