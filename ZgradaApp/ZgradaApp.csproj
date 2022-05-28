@@ -145,6 +145,12 @@
     <Compile Include="Forme\GlavnaForma.Designer.cs">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\LiftoviFroma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\LiftoviFroma.Designer.cs">
+      <DependentUpon>LiftoviFroma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\NivoiForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\GlavnaForma.resx">
       <DependentUpon>GlavnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\LiftoviFroma.resx">
+      <DependentUpon>LiftoviFroma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\NivoiForm.resx">
       <DependentUpon>NivoiForm.cs</DependentUpon>
