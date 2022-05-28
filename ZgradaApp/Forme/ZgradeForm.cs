@@ -94,6 +94,17 @@ namespace ZgradaApp
             forma.ShowDialog();
         }
 
+        private void btnLiftovi_Click(object sender, EventArgs e)
+        {
+            if (zgradeListView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite zgradu cije liftove zelite da vidite!");
+                return;
+            }
 
+            int idZgrade = Int32.Parse(zgradeListView.SelectedItems[0].SubItems[0].Text);
+            LiftoviFroma forma = new LiftoviFroma(idZgrade, zgradeListView.SelectedItems[0].SubItems[2].Text);
+            forma.ShowDialog();
+        }
     }
 }

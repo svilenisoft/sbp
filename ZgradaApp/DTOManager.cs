@@ -440,5 +440,136 @@ namespace ZgradaApp {
             return objekti;
         }
         #endregion
+        #region Liftovi
+        public static List<LiftPregled> getSviLiftoviZgrade(int idZgrade)
+        {
+            List<LiftPregled> zgrade = new List<LiftPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                IEnumerable<TeretniLift> teretniLiftovi= from l
+                                                in s.Query<TeretniLift>()
+                                                            orderby l.Id
+                                                            where l.zgrada.Id == idZgrade
+                                                            orderby l.Id descending
+                                                            select l;
+
+                foreach (TeretniLift lift in teretniLiftovi)
+                {
+                    zgrade.Add(new LiftPregled(lift.Id,lift.serijskiBroj,lift.brDanaKvara,lift.nosivost,lift.maxBrOsoba,"teretni",lift.nazivProizvodjaca,lift.datumServisa,lift.datumKvara));
+                }
+
+                IEnumerable<PutnickiLift> putnickiLiftovi = from l
+                                                 in s.Query<PutnickiLift>()
+                                                          orderby l.Id
+                                                          where l.zgrada.Id == idZgrade
+                                                          orderby l.Id descending
+                                                          select l;
+
+                foreach (PutnickiLift lift in putnickiLiftovi)
+                {
+                    zgrade.Add(new LiftPregled(lift.Id, lift.serijskiBroj, lift.brDanaKvara, lift.nosivost, lift.maxBrOsoba, "putnicki", lift.nazivProizvodjaca, lift.datumServisa, lift.datumKvara));
+                }
+
+
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+
+            return zgrade;
+        }
+
+
+        public static bool dodajLift(int idZgrade, string serisjkibr, string brDanaKvara,string nosivost,string maxBrOsoba,string tip,string nazivPropzivodjaca,string datumServisa,string datumKvara)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Lift lift= null;
+                switch (tip)
+                {
+                    case "teretni":
+                        lift = new TeretniLift();
+                        break;
+                    case "putnicki":
+                        lift = new PutnickiLift();
+                        break;
+                }
+                lift.serijskiBroj = Int32.Parse(serisjkibr);
+                lift.brDanaKvara = Int32.Parse(brDanaKvara);
+                lift.nosivost = Int32.Parse(nosivost);
+                lift.maxBrOsoba = Int32.Parse(maxBrOsoba);
+                lift.nazivProizvodjaca = nazivPropzivodjaca;
+                lift.datumServisa = DateTime.Parse(datumServisa);
+                lift.datumKvara = DateTime.Parse(datumKvara);
+
+                lift.zgrada = s.Get<Zgrada>(idZgrade);
+
+                s.SaveOrUpdate(lift);
+
+                s.Flush();
+
+                s.Close();
+
+
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        internal static bool izmeniLift(int idLifta, string datumServisa,string datumKvara,string brDanaKvara)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Lift l = s.Get<Lift>(idLifta);
+                l.brDanaKvara= Int32.Parse(brDanaKvara);
+                l.datumServisa = DateTime.Parse(datumServisa);
+                l.datumKvara = DateTime.Parse(datumKvara);
+                s.SaveOrUpdate(l);
+
+                s.Flush();
+
+                s.Close();
+
+
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        internal static bool obrisiLift(int idLifta)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Lift l = s.Load<Lift>(idLifta);
+
+                s.Delete(l);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        #endregion
     }
 }

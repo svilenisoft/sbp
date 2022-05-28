@@ -42,6 +42,11 @@ namespace ZgradaApp.Forme {
 
         }
 
+        private void DodajNivoForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void brNivoaTextBox_TextChanged(object sender, EventArgs e) {
             if (brNivoaTextBox.Text.Equals("-"))
                 return;

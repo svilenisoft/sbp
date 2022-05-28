@@ -57,6 +57,26 @@ namespace ZgradaApp {
         }
     }
 
+<<<<<<< HEAD
+    public class LiftPregled
+    {
+        public int id, serBr, brDanaKvara,nosivost,maxBrOsoba;
+        public String nazivProizvodjaca,tip;
+        public DateTime datumServisa, datumKvara;
+
+        public LiftPregled(int id, int serBr, int brDanaKvara,int nosivost,int maxBrOsoba,
+            string tip,string nazivProizvodjaca,DateTime datumServisa,DateTime datumKvara)
+        {
+            this.id = id;
+            this.serBr = serBr;
+            this.brDanaKvara = brDanaKvara;
+            this.nosivost = nosivost;
+            this.maxBrOsoba = maxBrOsoba;
+            this.tip = tip;
+            this.nazivProizvodjaca = nazivProizvodjaca;
+            this.datumServisa = datumServisa;
+            this.datumKvara = datumKvara;
+=======
     public class VlasnikPregled {
         public int id;
         public string naziv;
@@ -64,6 +84,7 @@ namespace ZgradaApp {
         public VlasnikPregled(int id, string naziv) {
             this.id = id;
             this.naziv = naziv;
+>>>>>>> 8545cb657de71cf7471f47643c6a5db9e165f416
         }
     }
 

@@ -94,4 +94,59 @@ F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\ob
 F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\obj\Debug\ZgradaApp.Forme.DodajNivoForm.resources
 F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\obj\Debug\ZgradaApp.Forme.ObjektiForma.resources
 F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\obj\Debug\ZgradaApp.Forme.DodajObjekatForm.resources
+<<<<<<< HEAD
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\ZgradaApp.exe.config
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\ZgradaApp.exe
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\ZgradaApp.pdb
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Antlr3.Runtime.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\FluentNHibernate.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Iesi.Collections.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\NHibernate.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Remotion.Linq.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Buffers.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Memory.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Numerics.Vectors.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Text.Encodings.Web.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Text.Json.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.ValueTuple.dll
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Antlr3.Runtime.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\FluentNHibernate.pdb
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\FluentNHibernate.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Iesi.Collections.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\NHibernate.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Remotion.Linq.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\Remotion.Linq.EagerFetching.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Buffers.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Memory.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Numerics.Vectors.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Text.Encodings.Web.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Text.Json.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\bin\Debug\System.ValueTuple.xml
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.csproj.AssemblyReference.cache
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Form1.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Forme.DodajNivoForm.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Forme.DodajObjekatForm.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Forme.DodajZgraduForm.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.GlavnaForma.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Forme.LiftoviFroma.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Forme.NivoiForm.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Forme.ObjektiForma.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Properties.Resources.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.ZgradeForm.resources
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.csproj.GenerateResource.cache
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.csproj.CoreCompileInputs.cache
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.csproj.CopyComplete
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.exe
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.pdb
+D:\fax\3god\baze\git\zgrada\sbp\ZgradaApp\obj\Debug\ZgradaApp.Forme.DodajLiftForm.resources
+=======
 F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\obj\Debug\ZgradaApp.Forme.LiftoviFroma.resources
+>>>>>>> 8545cb657de71cf7471f47643c6a5db9e165f416
