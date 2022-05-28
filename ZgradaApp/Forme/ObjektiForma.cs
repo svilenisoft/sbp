@@ -50,6 +50,8 @@ namespace ZgradaApp.Forme {
         }
 
         private void dodajObjBtn_Click(object sender, EventArgs e) {
+            DodajObjekatForm forma = new DodajObjekatForm(tip);
+            forma.ShowDialog();
 
         }
 
