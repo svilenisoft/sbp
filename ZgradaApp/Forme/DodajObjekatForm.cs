@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ZgradaApp.Forme {
-    
+
     public partial class DodajObjekatForm : Form {
 
         string tip;
+        int idNivoa;
 
-
-        public DodajObjekatForm(string tip) {
+        public DodajObjekatForm(int idNivoa, string tip) {
+            this.idNivoa = idNivoa;
             this.tip = tip;
             InitializeComponent();
 
@@ -50,13 +51,12 @@ namespace ZgradaApp.Forme {
         }
 
         private void fillVlasniciComboBox() {
-            //List<VlasnikPregled> vlasnici = DTOManager.getSviLjudi();
-            //upravnikComboBox.Items.Clear();
-            //vlasnikComboBox.Items.Clear();
-            //foreach (UpravnikSimplePregled u in upravnici) {
-            //    upravnikComboBox.Items.Add(u.naziv);
-            //}
-            //idZgrade = -1;
+            List<VlasnikPregled> vlasnici = DTOManager.getSviLjudi();
+            vlasnikComboBox.Items.Clear();
+            foreach (VlasnikPregled v in vlasnici) {
+                vlasnikComboBox.Items.Add(v.naziv);
+            }
+            vlasnikComboBox.Refresh();
         }
 
         private void brObjektaTxtBox_TextChanged(object sender, EventArgs e) {
@@ -72,9 +72,63 @@ namespace ZgradaApp.Forme {
                 case "Stambeni nivo":
                     break;
                 case "Poslovni nivo":
+                    dodajPoslovniNivo();
                     break;
                 case "Garazni nivo":
+                    dodajGarazniNivo();
                     break;
+            }
+        }
+
+        private void dodajPoslovniNivo() {
+            if (brObjektaTxtBox.Text.Length == 0) {
+                MessageBox.Show("Morate uneti redi broj objekta!", "Paznja!");
+                return;
+            }
+            if (imeFirmeTxtBox.Text.Trim().Length == 0) {
+                MessageBox.Show("Morate uneti ime firme!", "Paznja!");
+                return;
+            }
+
+
+            string poruka;
+            poruka = "Da li zelite da dodate poslovni objekat?";
+            string title = "Pitanje";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result = MessageBox.Show(poruka, title, buttons);
+
+            if (result == DialogResult.OK) {
+                if (DTOManager.dodajPoslovniObjekat(idNivoa, imeFirmeTxtBox.Text.Trim(), Int32.Parse(brObjektaTxtBox.Text))) {
+                    MessageBox.Show("Uspesno ste dodali poslovni objekat!", "Obavestenje");
+                    this.Close();
+                }
+                else {
+                    MessageBox.Show("Doslo je do greske! Objekat nije dodat!");
+                }
+            }
+        }
+
+        private void dodajGarazniNivo() {
+            if (brObjektaTxtBox.Text.Length == 0) {
+                MessageBox.Show("Morate uneti redi broj objekta!", "Paznja!");
+                return;
+            }
+
+
+            string poruka;
+            poruka = "Da li zelite da dodate parking mesto?";
+            string title = "Pitanje";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result = MessageBox.Show(poruka, title, buttons);
+
+            if (result == DialogResult.OK) {
+                if (DTOManager.dodajGaraznoMesto(idNivoa, regBrTxtBox.Text.Trim(), Int32.Parse(brObjektaTxtBox.Text))) {
+                    MessageBox.Show("Uspesno ste dodali garazno mesto!", "Obavestenje");
+                    this.Close();
+                }
+                else {
+                    MessageBox.Show("Doslo je do greske! Objekat nije dodat!");
+                }
             }
         }
 

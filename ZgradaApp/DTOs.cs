@@ -56,4 +56,14 @@ namespace ZgradaApp {
             this.data = data;
         }
     }
+
+    public class VlasnikPregled {
+        public int id;
+        public string naziv;
+
+        public VlasnikPregled(int id, string naziv) {
+            this.id = id;
+            this.naziv = naziv;
+        }
+    }
 }

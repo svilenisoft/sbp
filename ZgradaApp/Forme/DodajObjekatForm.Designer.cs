@@ -28,6 +28,7 @@ namespace ZgradaApp.Forme {
             this.brObjektaTxtBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dodajStanPannel = new System.Windows.Forms.Panel();
+            this.noviVlasnikBtn = new System.Windows.Forms.Button();
             this.vlasnikComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dodajLokalPannel = new System.Windows.Forms.Panel();
@@ -38,7 +39,6 @@ namespace ZgradaApp.Forme {
             this.regBrTxtBox = new System.Windows.Forms.TextBox();
             this.oracleCommand1 = new Oracle.ManagedDataAccess.Client.OracleCommand();
             this.upisBtn = new System.Windows.Forms.Button();
-            this.noviVlasnikBtn = new System.Windows.Forms.Button();
             this.dodajStanPannel.SuspendLayout();
             this.dodajLokalPannel.SuspendLayout();
             this.dodajMestoPannel.SuspendLayout();
@@ -81,13 +81,23 @@ namespace ZgradaApp.Forme {
             this.dodajStanPannel.Size = new System.Drawing.Size(236, 130);
             this.dodajStanPannel.TabIndex = 3;
             // 
+            // noviVlasnikBtn
+            // 
+            this.noviVlasnikBtn.Location = new System.Drawing.Point(80, 74);
+            this.noviVlasnikBtn.Name = "noviVlasnikBtn";
+            this.noviVlasnikBtn.Size = new System.Drawing.Size(75, 23);
+            this.noviVlasnikBtn.TabIndex = 5;
+            this.noviVlasnikBtn.Text = "Novi vlasnik";
+            this.noviVlasnikBtn.UseVisualStyleBackColor = true;
+            this.noviVlasnikBtn.Click += new System.EventHandler(this.noviVlasnikBtn_Click);
+            // 
             // vlasnikComboBox
             // 
             this.vlasnikComboBox.FormattingEnabled = true;
             this.vlasnikComboBox.Location = new System.Drawing.Point(93, 33);
             this.vlasnikComboBox.Name = "vlasnikComboBox";
             this.vlasnikComboBox.Size = new System.Drawing.Size(121, 21);
-            this.vlasnikComboBox.TabIndex = 4;
+            this.vlasnikComboBox.TabIndex = 2;
             // 
             // label3
             // 
@@ -121,7 +131,7 @@ namespace ZgradaApp.Forme {
             this.imeFirmeTxtBox.Location = new System.Drawing.Point(111, 55);
             this.imeFirmeTxtBox.Name = "imeFirmeTxtBox";
             this.imeFirmeTxtBox.Size = new System.Drawing.Size(100, 20);
-            this.imeFirmeTxtBox.TabIndex = 3;
+            this.imeFirmeTxtBox.TabIndex = 2;
             // 
             // dodajMestoPannel
             // 
@@ -146,7 +156,7 @@ namespace ZgradaApp.Forme {
             this.regBrTxtBox.Location = new System.Drawing.Point(111, 55);
             this.regBrTxtBox.Name = "regBrTxtBox";
             this.regBrTxtBox.Size = new System.Drawing.Size(100, 20);
-            this.regBrTxtBox.TabIndex = 3;
+            this.regBrTxtBox.TabIndex = 2;
             // 
             // oracleCommand1
             // 
@@ -161,16 +171,6 @@ namespace ZgradaApp.Forme {
             this.upisBtn.Text = "Upisi";
             this.upisBtn.UseVisualStyleBackColor = true;
             this.upisBtn.Click += new System.EventHandler(this.upisBtn_Click);
-            // 
-            // noviVlasnikBtn
-            // 
-            this.noviVlasnikBtn.Location = new System.Drawing.Point(80, 74);
-            this.noviVlasnikBtn.Name = "noviVlasnikBtn";
-            this.noviVlasnikBtn.Size = new System.Drawing.Size(75, 23);
-            this.noviVlasnikBtn.TabIndex = 5;
-            this.noviVlasnikBtn.Text = "Novi vlasnik";
-            this.noviVlasnikBtn.UseVisualStyleBackColor = true;
-            this.noviVlasnikBtn.Click += new System.EventHandler(this.noviVlasnikBtn_Click);
             // 
             // DodajObjekatForm
             // 

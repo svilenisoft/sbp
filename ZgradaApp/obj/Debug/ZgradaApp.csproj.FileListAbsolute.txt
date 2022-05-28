@@ -94,3 +94,4 @@ F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\ob
 F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\obj\Debug\ZgradaApp.Forme.DodajNivoForm.resources
 F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\obj\Debug\ZgradaApp.Forme.ObjektiForma.resources
 F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\obj\Debug\ZgradaApp.Forme.DodajObjekatForm.resources
+F:\Elfak\III god\II semestar\Sistemi baza podataka\Faza 2\ZgradaApp\ZgradaApp\obj\Debug\ZgradaApp.Forme.LiftoviFroma.resources

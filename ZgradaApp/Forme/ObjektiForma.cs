@@ -50,8 +50,9 @@ namespace ZgradaApp.Forme {
         }
 
         private void dodajObjBtn_Click(object sender, EventArgs e) {
-            DodajObjekatForm forma = new DodajObjekatForm(tip);
+            DodajObjekatForm forma = new DodajObjekatForm(idNivoa, tip);
             forma.ShowDialog();
+            fillObjektiList();
 
         }
 
@@ -60,7 +61,23 @@ namespace ZgradaApp.Forme {
         }
 
         private void ukloniObjBtn_Click(object sender, EventArgs e) {
+            if (objektiListView.SelectedItems.Count == 0) {
+                MessageBox.Show("Izaberite objekat koji zelite da obrisete!");
+                return;
+            }
 
+            int idObjekta = Int32.Parse(objektiListView.SelectedItems[0].SubItems[0].Text);
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result = MessageBox.Show("Da li zelite da obrisete objekat?", "Paznja!", buttons);
+
+            if (result == DialogResult.OK)
+                if (DTOManager.obrisiObjekat(idObjekta)) {
+                    MessageBox.Show("Uspesno ste obrisali objekat!");
+                    fillObjektiList();
+                }
+                else {
+                    MessageBox.Show("Doslo je do greske! Objekat nije obrisan!", "Obavestenje!");
+                }
         }
     }
 }
