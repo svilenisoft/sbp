@@ -180,6 +180,7 @@ namespace ZgradaApp
             this.btnLiftovi.TabIndex = 1;
             this.btnLiftovi.Text = "Liftovi";
             this.btnLiftovi.UseVisualStyleBackColor = true;
+            this.btnLiftovi.Click += new System.EventHandler(this.btnLiftovi_Click);
             // 
             // btnNivoi
             // 

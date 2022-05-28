@@ -56,4 +56,25 @@ namespace ZgradaApp {
             this.data = data;
         }
     }
+
+    public class LiftPregled
+    {
+        public int id, serBr, brDanaKvara,nosivost,maxBrOsoba;
+        public String nazivProizvodjaca,tip;
+        public DateTime datumServisa, datumKvara;
+
+        public LiftPregled(int id, int serBr, int brDanaKvara,int nosivost,int maxBrOsoba,
+            string tip,string nazivProizvodjaca,DateTime datumServisa,DateTime datumKvara)
+        {
+            this.id = id;
+            this.serBr = serBr;
+            this.brDanaKvara = brDanaKvara;
+            this.nosivost = nosivost;
+            this.maxBrOsoba = maxBrOsoba;
+            this.tip = tip;
+            this.nazivProizvodjaca = nazivProizvodjaca;
+            this.datumServisa = datumServisa;
+            this.datumKvara = datumKvara;
+        }
+    }
 }
