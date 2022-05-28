@@ -31,9 +31,6 @@ namespace ZgradaApp.Forme
         {
             this.zgradaLabel = new System.Windows.Forms.Label();
             this.listaLiftoviView = new System.Windows.Forms.ListView();
-            this.btnDodajLift = new System.Windows.Forms.Button();
-            this.btnIzmeni = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
             this.serijskibroj = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,6 +40,9 @@ namespace ZgradaApp.Forme
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnDodajLift = new System.Windows.Forms.Button();
+            this.btnIzmeni = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // zgradaLabel
@@ -73,7 +73,46 @@ namespace ZgradaApp.Forme
             this.listaLiftoviView.TabIndex = 1;
             this.listaLiftoviView.UseCompatibleStateImageBehavior = false;
             this.listaLiftoviView.View = System.Windows.Forms.View.Details;
-       
+            // 
+            // serijskibroj
+            // 
+            this.serijskibroj.Text = "serijski broj";
+            this.serijskibroj.Width = 120;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "naziv prozivodjaca";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "datum servisa";
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "datum kvara";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "broj dana kvara";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "tip";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "nosivost";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "max broj osova";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "id";
             // 
             // btnDodajLift
             // 
@@ -104,51 +143,6 @@ namespace ZgradaApp.Forme
             this.btnObrisi.Text = "Obrisi";
             this.btnObrisi.UseVisualStyleBackColor = true;
             this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
-            // serijskibroj
-            // 
-            this.serijskibroj.DisplayIndex = 0;
-            this.serijskibroj.Text = "serijski broj";
-            this.serijskibroj.Width = 120;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.DisplayIndex = 1;
-            this.columnHeader1.Text = "naziv prozivodjaca";
-            this.columnHeader1.Width = 150;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.DisplayIndex = 2;
-            this.columnHeader2.Text = "datum servisa";
-            this.columnHeader2.Width = 120;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.DisplayIndex = 3;
-            this.columnHeader3.Text = "datum kvara";
-            this.columnHeader3.Width = 120;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "broj dana kvara";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "tip";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "nosivost";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "max broj osova";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.DisplayIndex = 8;
-            this.columnHeader8.Text = "id";
             // 
             // LiftoviFroma
             // 
