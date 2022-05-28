@@ -142,7 +142,7 @@ namespace ZgradaApp {
             return zgrade;
         }
 
-       
+
 
         public static bool dodajNivo(int idZgrade, string brNivoa, string tip) {
             try {
@@ -381,7 +381,7 @@ namespace ZgradaApp {
             try {
                 ISession s = DataLayer.GetSession();
 
-                
+
 
                 s.Close();
             } catch (Exception ec) {
@@ -389,6 +389,55 @@ namespace ZgradaApp {
             }
 
             return osobe;
+        }
+
+        internal static List<StanarPregled> getStanariZgrade(int id) {
+            List<StanarPregled> stanari = new List<StanarPregled>();
+            try {
+                ISession s = DataLayer.GetSession();
+
+                IEnumerable<Osoba> =from z in s.Query<Osoba>
+
+                IEnumerable<Objekat> sviObjekti = null;
+
+                switch (tip) {
+                    case "Stambeni nivo":
+                        sviObjekti = from z in s.Query<Stan>() orderby z.redniBr where z.nivo.Id == idNivoa select z;
+                        break;
+                    case "Poslovni nivo":
+                        sviObjekti = from z in s.Query<Lokal>() orderby z.redniBr where z.nivo.Id == idNivoa select z;
+                        break;
+                    case "Garazni nivo":
+                        sviObjekti = from z in s.Query<Mesto>() orderby z.redniBr where z.nivo.Id == idNivoa select z;
+                        break;
+                }
+
+                foreach (Objekat o in sviObjekti) {
+                    string data = "";
+                    switch (tip) {
+                        case "Stambeni nivo":
+                            data = o.vlasnik.lIme + " (" + o.vlasnik.imeR + ") " + o.vlasnik.prezime;
+                            break;
+                        case "Poslovni nivo":
+                            data = o.imeFirma;
+                            break;
+                        case "Garazni nivo":
+                            if (o.status != 0)
+                                data = o.regBr;
+                            else
+                                data = "Mesto nije rezervisano";
+                            break;
+                    }
+                    objekti.Add(new ObjekatPregled(o.Id, o.redniBr, data));
+                }
+
+                s.Close();
+            } catch (Exception ec) {
+                Console.WriteLine(ec.StackTrace);
+                MessageBox.Show(ec.Message);
+            }
+
+            return objekti;
         }
         #endregion
     }

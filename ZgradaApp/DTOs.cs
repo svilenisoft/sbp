@@ -66,4 +66,13 @@ namespace ZgradaApp {
             this.naziv = naziv;
         }
     }
+
+    public class StanarPregled {
+        public int id, brStana;
+
+        public StanarPregled(int id, int brStana) {
+            this.id = id;
+            this.brStana = brStana;
+        }
+    }
 }
